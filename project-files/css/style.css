@@ -1,0 +1,261 @@
+/* Reset styles */
+
+/* Mobile Screen (Tested on iPhone X, iPhone 8, Pixel 1)  */
+
+/* Base styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem; 
+    line-height: 1.5;
+    color: #333;
+    background-color: #a4c5dd;
+  }
+
+/***** Header styling *****/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    padding-top: 2rem; 
+    height: 15em; /* works for desktop but not mobile, changed in media query */
+    width: auto;
+  }
+  
+  
+/***** Navigation styling *****/
+nav {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  nav a.active {
+    border-bottom: 0.2em solid #0077c2;
+    padding-bottom: 0.2em;
+
+  }
+
+  nav a:hover {
+    background-color: #fff;
+    border-bottom: 0.2em solid #0077c2;
+    padding-bottom: 0.2em;
+    transition: border-bottom 0.1s ease;
+    align-items: center;
+  }
+  
+  
+/***** Main content styling *****/
+main {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0.125em 0.313em rgba(0, 0, 0, 0.1);
+    margin-top: 1rem; 
+    margin-bottom: 1rem; 
+  }
+  
+  main h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #0077c2;
+    text-transform: uppercase;
+  }
+
+  main h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  main h3 {
+    font-size: 1rem;
+  }
+  
+  main p {
+    margin-bottom: 1rem;
+  }
+  
+  main ul {
+    margin-bottom: 2rem; 
+    font-size: 1rem; 
+    line-height: 1.5; 
+  }
+  
+  main table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 2rem; 
+    margin-bottom: 2rem; 
+
+  }
+  
+  main th, main td {
+    padding: 0.5rem;
+    border: 0.0625rem solid #ccc;
+
+  }
+  
+  main th {
+    font-weight: bold;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  main td {
+    font-size: 1rem; 
+    line-height: 1.5; 
+  }
+  
+  
+/***** Footer styling *****/
+footer {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0rem -0.125rem 0.313rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 1rem; 
+  }
+  
+  footer p {
+    margin-bottom: 1rem;
+  }
+
+/******* Contact Form ******/
+main form {
+    max-width: 60%;
+    padding: 4rem;
+    background-color: #fff;
+    margin: 0 auto; 
+    box-shadow: 0 0.0625rem 0.1563rem rgba(0, 0, 0, 0.1);
+  }
+  
+  main form label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  main form input,
+  main form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    border: 0.0625rem solid #ccc;
+  }
+  
+  main form button {
+    padding: 0.5rem 1rem;
+    background-color: #0077c2;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  main form button:hover {
+    background-color: #0077c2;
+  }
+
+  [aria-invalid="true"] {
+    border-color:  red;
+    box-shadow:  0 0 2px red;
+ }
+ 
+ .errmsg p {
+    color:  red; /* Make text red */
+ }
+ 
+  
+/***** About Me page styling *****/
+.about {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.about img {
+  max-width: 50%;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding-left: 2rem;
+}
+
+
+/* ---------------------- Mobile Screen (Tested on iPhone X, iPhone 8, Pixel 1) ----------------- */ 
+@media only screen and (max-width: 768px) {   
+  .logo img {
+    padding-top: 2rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  main {
+    max-width: 70%;
+  }
+
+  main form {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 1rem 2rem 1rem 1rem; /* finally aligned! */
+  }
+
+  .about {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .about img {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+  
+  .about p {
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 0rem;
+  }
+}
+
+/* ---------------------- Desktop Screen ----------------- */ 
+@media all and (min-width: 1026px) {  
+  /* No changes are needed here. */
+}
